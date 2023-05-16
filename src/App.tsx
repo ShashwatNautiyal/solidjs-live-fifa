@@ -7,7 +7,7 @@ const App: Component = () => {
     brazil: 0,
   });
   onMount(() => {
-    const event = new EventSource("http://0.0.0.0:8000/sse");
+    const event = new EventSource("http://deno-fifa.deno.dev/sse");
     event.onmessage = (e) => {
       const data = JSON.parse(e.data);
       setScore({
